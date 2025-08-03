@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saddam Hussain Basha Shaik | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+    }
+    .dark-mode {
+      --bg: #1c1c1c;
+      --text: #f4f4f4;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .project-toggle {
+      cursor: pointer;
+      color: #007acc;
+    }
+    .project-description {
+      display: none;
+      margin-top: 10px;
+    }
+    .theme-toggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <h1>Saddam Hussain Basha Shaik</h1>
+    <p>Senior Group Leader | Full Stack Engineer | AI Integrator</p>
+    <p>Email: <a href="mailto:sk.saddam007@gmail.com" style="color:#88c0d0;">sk.saddam007@gmail.com</a> | 
+    <a href="https://www.linkedin.com/in/saddam-hussain-basha" target="_blank" style="color:#88c0d0;">LinkedIn</a></p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Profile</h2>
+      <p>Senior Software Engineer & Group Leader with experience in AI-powered systems, microservices, and cloud infrastructure. Skilled in LLMs, LangChain, Spring Boot, React, AWS, and more.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Languages: Java, Python, Go, TypeScript</li>
+        <li>Frontend: React.js, Redux</li>
+        <li>Backend: Spring Boot, FastAPI, Flask</li>
+        <li>Cloud: AWS, Docker, Kubernetes</li>
+        <li>AI: LangChain, LangGraph, OpenAI, Pgvector</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p class="project-toggle" onclick="toggleDescription('rec')">▶ Recommendations.ai</p>
+      <div class="project-description" id="rec">
+        AI-powered recommendation engine using LangChain, FastAPI, React.js, and OpenAI APIs.
+      </div>
+
+      <p class="project-toggle" onclick="toggleDescription('rbac')">▶ RBAC System</p>
+      <div class="project-description" id="rbac">
+        Role-Based Access Control using Spring Boot, OAuth2, MongoDB, and MySQL.
+      </div>
+
+      <p class="project-toggle" onclick="toggleDescription('search')">▶ Semantic Search Engine</p>
+      <div class="project-description" id="search">
+        NLP-driven search system integrating deep learning, React, Flask, AWS ECS.
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <form onsubmit="alert('This is a demo. Form submission not functional.'); return false;">
+        <input type="text" placeholder="Your Name" required style="width:100%; padding:8px; margin-bottom:10px;" />
+        <input type="email" placeholder="Your Email" required style="width:100%; padding:8px; margin-bottom:10px;" />
+        <textarea placeholder="Message" required style="width:100%; padding:8px; height:100px;"></textarea>
+        <button type="submit" style="padding:10px 20px; margin-top:10px;">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Saddam Hussain Basha Shaik</p>
+  </footer>
+
+  <script>
+    function toggleDescription(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
